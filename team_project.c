@@ -1,4 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -198,7 +198,7 @@ void intro1() {
 	printf("#      #   #   #          #          #   #  #          #\n");
 	printf("########   #   ########   #          #   #  #     ######\n");
 	printf("           #              #              #  #     #    #\n");
-	printf("                                            #     ######\033[0m\n\n\n\n\n\n");
+	printf("                                            #     ######\033[0m\n\n\n\n");
 }
 
 void intro2() {
@@ -211,7 +211,7 @@ void intro2() {
 	printf("전날 박소영 교수님이 내주신 과제를 마저 하려고 노트북을 켰다.그런데 조금 이상해보였다.\n");
 	printf("바탕화면에는 아무것도 없었고, '머니게임'이라는 프로그램만 깔려있었다.\n");
 	printf("난 속으로 생각했다. '머니게임? 게임으로 돈을 번다는 건가?'\n");
-	printf("게임으로 돈을 벌 수 있다면 얼마나 좋을까 ? 난 홀린듯이 머니게임을 클릭했다...\n\n\n\n\n\n");
+	printf("게임으로 돈을 벌 수 있다면 얼마나 좋을까 ? 난 홀린듯이 머니게임을 클릭했다...\n\n\n\n");
 }
 
 
@@ -269,6 +269,7 @@ int main() {
 		else if (!strcmp(menu, "게임설명")) {
 			fflush(stdin);
 			printf("제한 시간 안에 화면에 나오는 화살표와 일치하는 방향키를 눌러 점수를 획득하세요!\n");
+			printf("여러분이 획득한 점수는 돈이 됩니다... 아주 큰 돈이죠...\n");
 		}
 		else if (!strcmp(menu, "랭킹")) {
 			fflush(stdin);
