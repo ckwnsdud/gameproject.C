@@ -90,6 +90,8 @@ void rankingRead() {
 			break;
 		}
 	}
+
+	printf("\n");
 }
 
 void rankingUpload(int score) {
@@ -163,7 +165,7 @@ void mainGame() {
 		if (arrowInput == 224) {	//만약 화살표라면
 			arrowInput = _getch();	//화살표 방향을 가져옴
 			if (arrowInput == pattern[i]) {		//arrowAscii의 아스키 코드와 입력한 아스키 코드가 같다면(맞았다면)
-				score += 1000;	//점수가 오르고
+				score += 10000;	//점수가 오르고
 				i++;		//다음 화살표를 출력
 				printf("\033[3;1f");
 				printf("\033[0m                                       ");
