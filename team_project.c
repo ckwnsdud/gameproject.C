@@ -176,6 +176,14 @@ void mainGame() {
 				}
 			}
 			else {		//틀렸다면
+				score -= 5000;  //점수가 내려가고
+				if (score < 0) {
+					score = 0;  //점수가 음수이면 0으로 고정
+					printf("\033[2;1f%d", score);	//점수 출력
+				}
+				else {
+					printf("\033[2;1f%d", score);	//점수 출력
+				}
 				printf("\033[3;1f");
 				printf("\033[41m                                       \033[0m");	//빨간색으로 표시
 			}
@@ -230,7 +238,7 @@ int main() {
 			break;
 		}
 		else {
-			printf("잘못 입력하셨어요1.\n");
+			printf("잘못 입력하셨어요.\n");
 		}
 	}
 
@@ -243,7 +251,7 @@ int main() {
 			break;
 		}
 		else {
-			printf("잘못 입력하셨어요2.\n");
+			printf("잘못 입력하셨어요.\n");
 		}
 	}
 
@@ -270,8 +278,11 @@ int main() {
 		}
 		else if (!strcmp(menu, "게임설명")) {
 			fflush(stdin);
-			printf("제한 시간 안에 화면에 나오는 화살표와 일치하는 방향키를 눌러 점수를 획득하세요!\n");
-			printf("여러분이 획득한 점수는 돈이 됩니다... 아주 큰 돈이죠...\n");
+			printf("\n\n\n게임설명\n");
+			printf("1. 화면에 나오는 화살표와 일치하는 방향키를 눌러 점수를 획득하세요\n");
+			printf("2. 게임시작 입력 후 방향키를 누르면 타이머가 시작됩니다\n");
+			printf("3. 제한시간은 30초이고 그 안에 최대한 많은 점수를 획득하시면 됩니다\n");
+			printf("4. 여러분의 점수는 돈이됩니다...  아주 큰 돈이요...\n\n\n");
 		}
 		else if (!strcmp(menu, "랭킹")) {
 			fflush(stdin);
